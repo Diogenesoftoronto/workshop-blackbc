@@ -25,12 +25,19 @@ function lotteryWinner(arrayOfStudents, chance) {
 
 // get the students from the submit button and put them into an array. Display that array to the document
 function getStudent(e) {
-  // arrayOfstudents.push(e.data)
   e.preventDefault();
-  console.table(e);
+  new FormData(studentForm)
 }
-const studentForm = document.querySelector(".form-lottery");
-
+const studentForm = document.querySelector(".form-student");
+const chanceForm = document.querySelector(".form-chance");
 studentForm?.addEventListener("submit", getStudent);
+const arrayOfstudents = [];
 
 console.log("helloworld", studentForm);
+studentForm.onformdata = function (e) {
+  let data = e.formData;
+  for (const value of data.values()) {
+    console.log(value)
+    arrayOfstudents.push(value)
+  }
+}
