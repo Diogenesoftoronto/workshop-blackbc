@@ -50,12 +50,14 @@
         </code>
     </pre>
     <p>We need a form for people to enter their name as a student. We also need someone to enter the chance that any student will win the lottery</p>
-    <form class="form-lottery" action="site.html" method="post">
+    <form class="form-student" action="site.html" method="post">
         <label for="studentName">Student Name</label>
         <input type="text" name="studentName" id="studentName">
+        <input type="submit" value="Submit">
+    </form>
+    <form class="form-chance" action="site.html" method="post">
         <label for="chance">Chance</label>
         <input type="number" name="chance" id="chance">
-        <input type="submit" value="Submit">
     </form>
     <p> Now we can run the code to see who wins the gift card</p>
     <button type="action" class="lottery" onclick="lotteryWinner(students, chance)">Click to see the winner</button>
