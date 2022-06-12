@@ -1,9 +1,13 @@
 // first we must create a function to do hold the code for our solution
 function lotteryWinner(arrayOfStudents, chance) {
+  // find the amount of student in the array and the amount is the same as the length
   const amountOfStudents = arrayOfStudents.length;
+  // round down the ratio of students to noone winning
   const ratio = Math.floor(chance / 100);
+  // calculates the amount of times we need to add nobodies to the array
   const numberOfNulls = amountOfStudents / ratio;
   // the ratio of students to nulls (in the array) multiplied by one hundred should be the same as chance
+  // add students to the lottery
   // copy array of students to the lottery array
   let lotteryArray = [...arrayOfStudents];
   // we have to create a loop that adds the nulls to the array
