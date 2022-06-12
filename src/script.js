@@ -29,9 +29,13 @@ function getStudent(event) {
   new FormData(studentForm)
 }
 const studentForm = document.querySelector(".form-student");
+
 const chanceForm = document.querySelector(".form-chance");
+
 studentForm?.addEventListener("submit", getStudent);
+
 let arrayOfStudents = [];
+
 studentForm.onformdata = function (event) {
   let data = event.formData;
   let studentNames = data.getAll('studentName')
@@ -43,6 +47,6 @@ studentForm.onformdata = function (event) {
   console.log(arrayOfStudents)
 }
 function addStudentInput(event) {
-
   
+
 }
