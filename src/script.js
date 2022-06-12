@@ -14,6 +14,7 @@ function lotteryWinner(arrayOfStudents, chance) {
   while (lotteryArray.length - amountOfStudents < numberOfNulls) {
     lotteryArray.push(null);
   }
+  const greetings = ['hello', 'goodbye', 'sayonara', 'yo', 'salute']
   // we must create a random integer between 0 and (the amount of students in the class) - 1
   const randomNumber = Math.floor(Math.random() * lotteryArray.length);
   // the winner is going to be whichever value is at the index of the random number.
