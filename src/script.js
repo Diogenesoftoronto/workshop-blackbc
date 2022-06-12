@@ -37,7 +37,12 @@ studentForm.onformdata = function (event) {
   let studentNames = data.getAll('studentName')
   arrayOfStudents = [...studentNames]
   // some code to remove duplicates
-  const setOfStudents = new Set();
+  let setOfStudents = new Set();
   setOfStudents = [...arrayOfStudents]
   arrayOfStudents = [...setOfStudents]
+  console.log(arrayOfStudents)
+}
+function addStudentInput(event) {
+
+  
 }
