@@ -34,10 +34,20 @@ const chanceForm = document.querySelector(".form-chance");
 
 chanceForm?.addEventListener("submit", getChance);
 
+function getChance(event) {
+  event.preventDefault();
+  new FormData(chanceForm);
+}
 
+let chance;
 
 const winnerButton = document.querySelector(".button-winner");
 
+chanceForm.onformdata = function (event) {
+  let data = event.formData;
+  chance = data.get('chance')
+  // return chance
+}
 
 
 let arrayOfStudents = [];
@@ -51,6 +61,7 @@ studentForm.onformdata = function (event) {
   setOfStudents = [...arrayOfStudents]
   arrayOfStudents = [...setOfStudents]
   console.log(arrayOfStudents)
+  // return arrayOfStudents
 }
 
 studentForm?.addEventListener("submit", getStudent);
