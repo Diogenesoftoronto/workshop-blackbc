@@ -1,0 +1,4 @@
+considering teaching or adding a css framework with bulma or bootstrap.
+
+can expand workshop to add animations and more styles maybe an advanced section on that stuff.
+
