@@ -32,7 +32,13 @@ const studentForm = document.querySelector(".form-student");
 
 const chanceForm = document.querySelector(".form-chance");
 
-studentForm?.addEventListener("submit", getStudent);
+chanceForm?.addEventListener("submit", getChance);
+
+
+
+const winnerButton = document.querySelector(".button-winner");
+
+
 
 let arrayOfStudents = [];
 
@@ -46,7 +52,20 @@ studentForm.onformdata = function (event) {
   arrayOfStudents = [...setOfStudents]
   console.log(arrayOfStudents)
 }
-function addStudentInput(event) {
-  
 
+studentForm?.addEventListener("submit", getStudent);
+const addStudent = document.querySelector('.add-student');
+
+addStudent?.addEventListener("click", addStudentInput);
+
+
+function addStudentInput(event) {
+  // append a new input to the form
+  const input = document.createElement('input');
+  input.setAttribute('type', 'text');
+  input.setAttribute('name', 'studentName');
+  input.setAttribute('placeholder', 'Enter Student Name');
+  studentForm.appendChild(input);
 }
+
+winnerButton?.addEventListener("click", addStudentInput);
