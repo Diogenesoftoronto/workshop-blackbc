@@ -9,3 +9,5 @@ Make something inefficient and get them to simplify.
 Have an open ended addition for them.
 
 Have a function that is simple and have them advanded things to it. 
+
+styling might be the most accessible part
