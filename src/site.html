@@ -26,14 +26,14 @@
     </div>
   </section>
 
-    <p>The Problem</p>
-    <p>We have 5 gift cards and we want to give the cards to 5 random students in this class. </p><i>How could we do that?</i>
+    <p class="m-3 is-size-4 has-text-centered">The Problem</p>
+    <p class="m-3">We have 5 gift cards and we want to give the cards to 5 random students in this class. </p><i class="m-3">How could we do that?</i>
 
-    <p>The Solution</p>
-    <p>We can use a random number generator to generate a random number between 1 and 5. Then we can use  loop through the gift cards and assign each gift card to a random student.</p>
+    <p class="is-size-4 has-text-centered">The Solution</p>
+    <p class="m-3">We can use a random number generator to generate a random number between 1 and 5. Then we can use  loop through the gift cards and assign each gift card to a random student.</p>
 
-    <p>The Code</p>
-    <p>We can use the following code to generate a random number between 1 and 5 in JavaScript:</p>
+    <p class="is-size-4 has-text-centered">The Code</p>
+    <p class="m-3">We can use the following code to generate a random number between 1 and 5 in JavaScript:</p>
     <pre>
         <code>
           // first we must create a function to do hold the code for our solution
@@ -63,20 +63,20 @@
           }
         </code>
     </pre>
-    <p>We need a form for people to enter their name as a student. We also need someone to enter the chance that any student will win the lottery</p>
-    <form class="form-student" action="site.html" method="post">
+    <p class="m-3">We need a form for people to enter their name as a student. We also need someone to enter the chance that any student will win the lottery</p>
+    <form class="m-3 form-student" action="site.html" method="post">
         <label for="studentName">Student Name</label>
         <input type="text" name="studentName" id="studentName">
         <input class="add-student" type="button" value="Add Student">
         <input type="submit" value="Submit">
     </form>
     
-    <form class="form-chance" action="site.html" method="post">
+    <form class="m-3 form-chance" action="site.html" method="post">
         <label for="chance">Chance</label>
         <input type="number" name="chance" id="chance" value="100">
         <input type="submit" value="Submit">
     </form>
-    <p> Now we can run the code to see who wins the gift card</p>
-    <button type="action" disabled class="button is-outlined is-success button-winner" >Click to see the winner</button>
+    <p class="m-3"> Now we can run the code to see who wins the gift card</p>
+    <button type="action" disabled class="m-3 button is-outlined is-success button-winner" >Click to see the winner</button>
 </body>
 </html>
