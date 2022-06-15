@@ -82,6 +82,7 @@ function addStudentInput(event) {
   // append a new input to the form
   const input = document.createElement("input");
   input.setAttribute("type", "text");
+  input.setAttribute("class", "input m-2");
   input.setAttribute("name", "studentName");
   input.setAttribute("placeholder", "Enter Student Name");
   studentForm.appendChild(input);
