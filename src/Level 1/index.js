@@ -1,8 +1,8 @@
 // create an list of students
-studentList = []
+let studentList = []
 
 // write a function that takes an array of students and returns a random student
-getRandomStudent(students) {
+function getRandomStudent(students) {
   randomNumber = Math.floor(Math.random() * students.length);
   // This function is incomplete your challenge is to get it to work! 
   return null
