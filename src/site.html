@@ -65,16 +65,16 @@
     </pre>
     <p class="m-3">We need a form for people to enter their name as a student. We also need someone to enter the chance that any student will win the lottery</p>
     <form class="m-3 form-student" action="site.html" method="post">
-        <label for="studentName">Student Name</label>
-        <input type="text" name="studentName" id="studentName">
-        <input class="add-student" type="button" value="Add Student">
-        <input type="submit" value="Submit">
+        <label class="m-2 label" for="studentName">Student Name</label>
+        <input class="m-2 input" type="text" name="studentName" id="studentName">
+        <input class="m-2 button add-student" type="button" value="Add Student">
+        <input class="m-2 button" type="submit" value="Submit">
     </form>
     
     <form class="m-3 form-chance" action="site.html" method="post">
-        <label for="chance">Chance</label>
-        <input type="number" name="chance" id="chance" value="100">
-        <input type="submit" value="Submit">
+        <label class="label m-2" for="chance">Chance</label>
+        <input class="m-2 input"  type="number" name="chance" id="chance" value="100">
+        <input class="m-2 button" type="submit" value="Submit">
     </form>
     <p class="m-3"> Now we can run the code to see who wins the gift card</p>
     <button type="action" disabled class="m-3 button is-outlined is-success button-winner" >Click to see the winner</button>
