@@ -53,6 +53,7 @@ const winnerButton = document.querySelector(".button-winner");
 chanceForm.onformdata = function (event) {
   let data = event.formData;
   chance = data.get("chance");
+  if (chance && arrayOfStudents.length) winnerButton.removeAttribute('disabled')
   console.log(chance);
   // return chance
 };
@@ -67,6 +68,7 @@ studentForm.onformdata = function (event) {
   let setOfStudents = new Set();
   setOfStudents = [...arrayOfStudents];
   arrayOfStudents = [...setOfStudents];
+  if (chance && arrayOfStudents.length) winnerButton.removeAttribute('disabled')
   console.log(arrayOfStudents);
   // return arrayOfStudents
 };
