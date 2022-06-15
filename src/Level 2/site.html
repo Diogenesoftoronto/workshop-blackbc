@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dio's Lottery</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script defer src="./script.js"></script>
+    <link rel="stylesheet"
+    href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/styles/default.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/11.5.1/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <h1>The Gift Card Lottery</h1>
+    </div>
+
+    <h2>The Problem</h2>
+    <p>We have 5 gift cards and we want to give the cards to 5 random students in this class. </p><i>How could we do that?</i>
+
+    <h3>The Solution</h2>
+    <p>We can use a random number generator to generate a random number between 1 and 5. Then we can use  loop through the gift cards and assign each gift card to a random student.</p>
+
+    <h4>The Code</h2>
+    <p>We can use the following code to generate a random number between 1 and 5 in JavaScript:</p>
+    <pre>
+        <code>
+          // first we must create a function to do hold the code for our solution
+          function lotteryWinner(arrayOfStudents, chance) {
+
+            const amountOfStudents = arrayOfStudents.length
+
+            const ratio = Math.floor(chance/100)
+
+            const numberOfNulls = amountOfStudents/ratio;
+
+            // the ratio of students to nulls (in the array) multiplied by one hundred should be the same as chance
+
+            // copy array of students to the lottery array
+            let lotteryArray = [...arrayOfStudents];
+
+            // we have to create a loop that adds the nulls to the array
+            while ((lotteryArray.length - amountOfStudents) < numberOfNulls) {lotteryArray.push(null)}
+          
+            // we must create a random integer between 0 and (the amount of students in the class) - 1 
+
+            const randomNumber = Math.floor(Math.random() * lotteryArray.length);
+
+            const winner = lotteryArray[randomNumber]
+            
+            return winner
+          }
+        </code>
+    </pre>
+    <p>We need a form for people to enter their name as a student. We also need someone to enter the chance that any student will win the lottery</p>
+    <form class="form-student" action="site.html" method="post">
+        <label for="studentName">Student Name</label>
+        <input type="text" name="studentName" id="studentName">
+        <input class="add-student" type="button" value="Add Student">
+        <input type="submit" value="Submit">
+    </form>
+    
+    <form class="form-chance" action="site.html" method="post">
+        <label for="chance">Chance</label>
+        <input type="number" name="chance" id="chance">
+    </form>
+    <p> Now we can run the code to see who wins the gift card</p>
+    <button type="action" class="button-winner" >Click to see the winner</button>
+</body>
+</html>
